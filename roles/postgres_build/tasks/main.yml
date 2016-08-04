@@ -30,8 +30,8 @@
   become_user: ozp
 
 - name: Build postgres
-  command: make
-  args: "-j {{ ansible_processor_count }}"
+  command: make -j {{ ansible_processor_count }}
+  args:
     chdir: "{{ download_dir }}/postgresql-{{ postgres_version }}"
   become: true
   become_user: ozp
