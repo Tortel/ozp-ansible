@@ -23,7 +23,7 @@
   become_user: ozp
 
 - name: Make python
-  command: chdir={{ download_dir }}/Python-{{ python_version }} make
+  command: chdir={{ download_dir }}/Python-{{ python_version }} make -j {{ ansible_processor_count }}
   become: true
   become_user: ozp
 
