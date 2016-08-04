@@ -62,7 +62,7 @@
 #   become: true
 
 - name: Install development tools
-  yum: name='@development'
+  yum: name='@development' state=installed
   become: true
 
 - name: Create /usr/local/ozp directory
