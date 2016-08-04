@@ -51,8 +51,8 @@ start() {
 	if [ -f $PIDFILE ]; then
 	    PID=`cat $PIDFILE`
 	    echo "$APPNAME already running: $PID"
-	    failure
-	    exit 2;
+	    warning
+	    exit;
 	fi
         echo -n "Starting $APPNAME"
         source $ACTIVATE
