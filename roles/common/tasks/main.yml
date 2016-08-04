@@ -22,7 +22,7 @@
     - libjpeg-devel
     - libselinux-python # required for ansible i guess
     - nfs-utils
-    - nfs-utils-lib
+    - libnfsidmap
 
 - name: Create ozp user
   user:
