@@ -28,7 +28,7 @@
   become_user: ozp
 
 - name: Make nginx
-  command: chdir={{ download_dir }}/nginx-{{ nginx_version }} make
+  command: chdir={{ download_dir }}/nginx-{{ nginx_version }} make -j {{ ansible_processor_count }}
   become: true
   become_user: ozp
 
