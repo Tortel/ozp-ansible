@@ -3,7 +3,7 @@
 # yum mirror
 
 - name: Install prereqs
-  yum: name={{ item }} state=present
+  yum: name={{ item }} state=installed
   with_items:
     - epel-release
     - vim
@@ -23,7 +23,6 @@
     - libselinux-python # required for ansible i guess
     - nfs-utils
     - nfs-utils-lib
-  become: true
 
 - name: Create ozp user
   user:
