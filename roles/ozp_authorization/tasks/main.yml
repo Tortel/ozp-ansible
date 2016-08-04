@@ -60,6 +60,10 @@
   command: service gunicorn_demoauth redeploy
   become: true
 
+- name: Stop the service
+  service: name=gunicorn_demoauth state=stopped
+  become: true
+
 - name: Ensure the service is running (and enable it at boot)
   service: name=gunicorn_demoauth state=started enabled=yes
   become: true
