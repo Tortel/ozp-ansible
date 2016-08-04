@@ -23,7 +23,6 @@
     - libselinux-python # required for ansible i guess
     - nfs-utils
     - nfs-utils-lib
-
   become: true
 
 - name: Create ozp user
